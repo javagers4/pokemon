@@ -115,7 +115,7 @@
       <hr class="sidebar-divider">
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../cart/show.html">
           <span>포켓몬 위시리스트</span>
         </a>
       </li>
