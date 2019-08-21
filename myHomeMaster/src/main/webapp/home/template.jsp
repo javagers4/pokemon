@@ -158,7 +158,7 @@
       <hr class="sidebar-divider">
       
        <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../ranking/rankingList.html">
           <span>포켓몬 월드랭킹</span>
         </a>
       </li>
