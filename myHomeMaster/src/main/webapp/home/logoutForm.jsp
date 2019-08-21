@@ -8,8 +8,13 @@
 </head>
 <body>
 <form action="../logout/template.html" method="get">
-안녕하세요? ${sessionScope.loginUser }님~<br/>
-<input type="submit" value="로그아웃"/>
+　<br/><font color="yellow"> ${sessionScope.loginUser } 트레이너님의<br/>
+방문을 환영합니다.</font>
+
+<div class="mt-3">
+		<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="LOGOUT"/>
+</div>
+
 </form>
 </body>
 </html>

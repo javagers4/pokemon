@@ -25,6 +25,10 @@
         cursor: pointer;
         color: white;
       }
+      .class{
+      	color: white;
+      }
+      
     </style>
 </head>
 <body>
@@ -60,15 +64,33 @@
 	<c:otherwise>
 		<form:form modelAttribute="user" 
 				action="../login/template.html" method="post">
-		I  D :&nbsp;  <form:input path="id" size="16"/>
-		<font color="red"><form:errors path="id"/></font><br/><br/>
-		PW : <form:password path="password" size="16"/>
-		<font color="red"><form:errors path="password"/></font>
-		<br/><br/>
-		<input type="submit" value="            Login" class="img-button"  />
-		<input type="reset" value="Cancel"/>
+ 				
+ 				<div class="form-group">
+				<font color="yellow">I  D<form:input path="id" class="form-control form-control-lg" placeholder="JSL Legend"/></font>
+                </div>
+				<font color="red"><form:errors path="id"/></font>
+
+				<div class="form-group">
+					<font color="yellow">PASSWORD<form:password path="password" cssClass="form-control form-control-lg"  /></font>
+				</div>
+				<font color="red"><form:errors path="password"/></font>
+				
+				<div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input">
+                     <font color="yellow"> Keep me signed in</font>
+                    </label>
+                  </div>
+
+				<div class="mt-3">
+					<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN"/>
+					<input type="reset" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="CANCEL"/>
+				</div>
 		</form:form>
-<div align="right"><a href="../home/userentry.html">가입하기</a></div>
+<!-- <div align="center"><a href="../home/userentry.html"><font color="white"> 신규 등록 </font></a></div> -->
+<div class="text-center mt-4 font-weight-light">
+                  Don't have an account? <a href="../home/userentry.html" ><font color="white">Create</font></a>
+</div>
 	</c:otherwise>
 </c:choose>
 </body>

@@ -10,6 +10,23 @@
 <head>
 <meta charset="EUC-KR">
 <title>사용자 등록 화면</title>
+<style type="text/css">
+ #content{
+	width: 100%;
+	height: 95%;
+	float: left;
+ 	background-image: url('../imgs/entry6.jpg');  
+	background-size: 1300px;
+}
+
+.col-md-6{
+	color: white;
+}
+
+.body{
+	color: white;
+}
+</style>
 </head>
 <body>
 <script type="text/javascript">
@@ -50,32 +67,88 @@ function validate(form){
 	}else { return false; }
 }
 </script>
-<h2>사용자 등록 화면</h2>
-<div align="left" class="body">
-<form:form name="frm" modelAttribute="user" method="post" 
-	action="../entry/entry.html" onSubmit="return validate(this)">
-<input type="hidden" name="idChecked" id="idChecked"/>
-이름	<form:input path="name" maxLength="20"
-		cssClass="name"/><br/>
-아이디 <form:input path="id" maxLength="20"
-		cssClass="id"/>
-<input type="button" value="중복검사" onClick="idCheck()"/>		
+
+	<div align="center" class="body">
+	<div id="content">
+<!-- 		<img alt="" src="../imgs/main1.jpg" width="100%" height="90%" /> -->
+	</div>
+		<h2>포켓몬 트레이너 등록</h2>
+		<h2>Pokemon Trainer Entry</h2>
+		<br />
+		<form:form name="frm" modelAttribute="user" method="post"
+			action="../entry/entry.html" onSubmit="return validate(this)">
+			<input type="hidden" name="idChecked" id="idChecked" />
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label" >Name</label>
+					<div class="col-sm-9">
+						<!--                             <input type="text"  placeholder="Name..." class="form-control" /> -->
+						<form:input path="name" cssClass="form-control" />
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">I D</label>
+					<div class="col-sm-9">
+						<!-- 						<input type="text" placeholder="Name..." class="form-control"  /> -->
+						<form:input path="id" cssClass="form-control" />
+					</div>
+				</div>
+			</div>
+			<input type="button" value="ID Check" onClick="idCheck()" />
+			<br />
+			<br />
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">PASSWORD</label>
+					<div class="col-sm-9">
+						<!-- 						<input type="password" path="password" placeholder="Password..." class="form-control" /> -->
+						<form:password path="password" cssClass="form-control" />
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">PASSWORD *</label>
+					<div class="col-sm-9">
+						<input type="password" name="CONFIRM"
+							placeholder="Password Confirm..." class="form-control" />
+					</div>
+				</div>
+			</div>	
+			Male <form:radiobutton path="gender" value="M" cssClass="form-control" />
+			Female <form:radiobutton path="gender" value="F" cssClass="form-control" />
+
+	<br/>
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">E-mail</label>
+					<div class="col-sm-9">
+						<form:input path="email" cssClass="form-control" />
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div class="col-md-6">
+			Job : <form:select path="job" cssClass="form-control">
+<form:option value="--선택하세요--"/><form:option value="학생"/>
+<form:option value="회사원"/><form:option value="IT 전문가"/>
+<form:option value="자영업"/><form:option value="포켓트레이너"/>
+</form:select>
+</div>
 <br/>
-패스워드 <form:password path="password" maxLength="20"
-		cssClass="password"/><br/>
-패스워드 확인 <input type="password" name="CONFIRM"/><br/>
-성별 : 남 <form:radiobutton path="gender" value="M"/>
-여 <form:radiobutton path="gender" value="F"/><br/><br/>
-E-MAIL <form:input path="email" maxLength="50"
-			cssClass="email"/><br/>
-직업 : <form:select path="job">
-<form:option value="--선택하세요--"/><form:option value="회사원"/>
-<form:option value="학생"/><form:option value="기타"/>
-</form:select><br/><br/>
-<input type="submit" value="등록" />
-<input type="reset" value="리셋" />
+
+<input type="submit" class="btn btn-primary mr-2" value="Submit"/>
+<input type="reset" class="btn btn-light" value="Cancel"/>
+
+<!-- <input type="submit" value="등록" /> -->
+<!-- <input type="reset" value="리셋" /> -->
 </form:form>
 </div>
+	
 </body>
 </html>
 

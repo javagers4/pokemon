@@ -11,15 +11,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script type="text/javascript">
+  function workingClock() {
+		var days=["일","월","화","수","목","금","토"];
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth()+1;
+		if(month < 10) month="0" + month;
+		var date = today.getDate();
+		if(date<10) date="0"+date;
+		var index = today.getDay();
+		var day = days[index];
+		var hour = today.getHours();
+		var min = today.getMinutes();
+		if(min < 10) min="0" +min;
+		var sec = today.getSeconds();
+		if(sec < 10) sec = "0"+sec;
+		var str = year+"-"+month+"-"+date + "  " + day+"  "+ hour +" : "+ min+" : "+ sec;
+		document.getElementById("clock").innerHTML = str;
+	}
 
-  <title>SB Admin 2 - Dashboard</title>
+	function startClock() {
+		setInterval(workingClock, 1000);
+	}
+  </script>
+
+  <title>JAVAGERS's Final Legend Project</title>
   <style type="text/css">
+  
   #content{
-	width: 100%;
-	height: 90%;
+	width: 99%;
+	height:30%;
 	float: left;
-/* 	background-image: url('../imgs/pokeMain.jpg');   */
-	background-size: 1600px;
+/*  	background-image: url('../imgs/main1.jpg');    */
+	background-size: 1800px;
 }
 	
 	/* #aside{
@@ -35,7 +60,7 @@
   <link href="${pageContext.request.contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="javascript:startClock()">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -56,7 +81,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link"> 코세아 34기 Javagers <br/> 최종 프로젝트 <br/> 이 부분 활용 가능
+        <a class="nav-link"> JSL 34기 Javagers <br/> 최종 프로젝트 <br/> 이 부분 활용 가능
         <div id="aside">
 		<fieldset>
 			<c:choose>
@@ -159,7 +184,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">선택하기 </h6>
             <a class="collapse-item" href="login.html">로그인</a>
-            <a class="collapse-item" href="register.html">회원가입</a>
+            <a class="collapse-item" href="../home/userentry.html">회원가입</a>
             <a class="collapse-item" href="forgot-password.html">비밀번호 찾기</a>
           </div>
         </div>
@@ -207,7 +232,10 @@
             </div>
           </form>
 
-          <!-- Topbar Navbar -->
+				<a href="#" onclick="javascript:startClock()"> </a>
+				<div id="clock">마법의 화면</div>
+
+				<!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -249,8 +277,8 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                    <div class="small text-gray-500">August 20, 2019</div>
+                    <span class="font-weight-bold">회원가입, 로그인 화면 구현하기</span>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -260,8 +288,8 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
+                    <div class="small text-gray-500">August 20, 2019</div>
+                    	진영이 죽여버리기
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -271,11 +299,11 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
+                    <div class="small text-gray-500">August 21, 2019</div>
+                    	진영이 한 번 더 죽여버리기
                   </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Close</a>
               </div>
             </li>
 
@@ -297,8 +325,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                    <div class="text-truncate">재영이형 ! 오늘 저랑 포켓몬 대결하기로 하셨잖아요 ! </div>
+                    <div class="small text-gray-500">정 진영 · 58분 전</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -307,8 +335,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                    <div class="text-truncate">이쪽에 잠만보 발견이요!</div>
+                    <div class="small text-gray-500">김 도완 · 1시간 전</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -317,8 +345,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                    <div class="text-truncate">오빠 왜 이렇게 연락이...</div>
+                    <div class="small text-gray-500">강민경 · 2시간 전 </div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -327,8 +355,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                    <div class="text-truncate">오빠 제발 좀 연락해..죽을 것 같아</div>
+                    <div class="small text-gray-500">크리스탈 · 4시간 전</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -372,7 +400,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-		이곳을 활용할 수 있습니다.
+		이곳도 활용할 수 있음.
         </div>
         
 	<div id="content">
@@ -382,7 +410,7 @@
 			</c:when>
 			<c:otherwise>
 <%-- 				<jsp:include page="front.jsp"/> --%>
-				<img alt="" src="../imgs/main1.jpg" width="100%" height="90%"/>
+				<img alt="" src="../imgs/main1.jpg" width="100%" height="100%"/>
 			</c:otherwise>
 		</c:choose>	
 	</div>
