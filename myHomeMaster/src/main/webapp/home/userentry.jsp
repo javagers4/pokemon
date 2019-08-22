@@ -15,8 +15,8 @@
 	width: 100%;
 	height: 95%;
 	float: left;
- 	background-image: url('../imgs/entry6.jpg');  
-	background-size: 1300px;
+ 	background-image: url('../imgs/userentry.jpg');  
+	background-size: 1400px;
 }
 
 .col-md-6{
@@ -26,6 +26,10 @@
 .body{
 	color: white;
 }
+
+/* .text-center{ */
+/* 	text-decoration: underline; */
+/* } */
 </style>
 </head>
 <body>
@@ -71,7 +75,10 @@ function validate(form){
 	<div align="center" class="body">
 	<div id="content">
 <!-- 		<img alt="" src="../imgs/main1.jpg" width="100%" height="90%" /> -->
-	</div>
+	</div><br/>
+	<div class="brand-logo">
+                <img src="../imgs/userentry2.png" alt="logo" height="10%" width="10%">
+              </div>
 		<h2>포켓몬 트레이너 등록</h2>
 		<h2>Pokemon Trainer Entry</h2>
 		<br />
@@ -87,6 +94,7 @@ function validate(form){
 					</div>
 				</div>
 			</div>
+			
 			<br />
 			<div class="col-md-6">
 				<div class="form-group row">
@@ -133,18 +141,31 @@ function validate(form){
 			</div>
 			<br/>
 			<div class="col-md-6">
-			Job : <form:select path="job" cssClass="form-control">
+			Job : <form:select path="job" cssClass="form-control" size="4">
 <form:option value="--선택하세요--"/><form:option value="학생"/>
-<form:option value="회사원"/><form:option value="IT 전문가"/>
+<form:option value="회사원"/><form:option value="IT"/>
 <form:option value="자영업"/><form:option value="포켓트레이너"/>
+<form:option value="웹 디자이너"/><form:option value="교사"/>
 </form:select>
 </div>
 <br/>
+			<div class="mb-4">
+				<div class="form-check">
+					<label class="form-check-label text-muted"> <input
+						type="checkbox" class="form-check-input"> 
+						<font color="white">I agree to all Terms & Conditions</font>
+					</label>
+				</div>
+			</div>
 
-<input type="submit" class="btn btn-primary mr-2" value="Submit"/>
-<input type="reset" class="btn btn-light" value="Cancel"/>
+			<input type="submit" class="btn btn-primary mr-2" value="Submit"/>
+			<input type="reset" class="btn btn-light" value="Cancel"/>
 
-<!-- <input type="submit" value="등록" /> -->
+			<div class="text-center mt-4 font-weight-light">
+				Already have an account? <a href="../home/intro.html" class="text-primary"><font color="white" ><u>Login</u></font></a>
+			</div>
+
+			<!-- <input type="submit" value="등록" /> -->
 <!-- <input type="reset" value="리셋" /> -->
 </form:form>
 </div>

@@ -13,7 +13,7 @@
   <meta name="author" content="">
   <script type="text/javascript">
   function workingClock() {
-		var days=["일","월","화","수","목","금","토"];
+		var days=["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
 		var today = new Date();
 		var year = today.getFullYear();
 		var month = today.getMonth()+1;
@@ -46,11 +46,13 @@
 /*  	background-image: url('../imgs/main1.jpg');    */
 	background-size: 1800px;
 }
-	
-	/* #aside{
-	color: red;
-		font-size: 20px;
-	}	 */
+
+.sticky-footer{
+	background: #F0F8FF;
+}
+.container-fluid{
+	background: #F0F8FF;
+}
   </style>
 
   <!-- Custom fonts for this template-->
@@ -131,7 +133,7 @@
       <hr class="sidebar-divider">
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../read/read.html">
           <span>포켓몬 도감(능력치)</span>
         </a>
       </li>
@@ -208,20 +210,16 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 	  
-      <!-- Main Content -->
-<!--       <div id="content"> -->
-		
-	
         <!-- 화면 상단바 -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-<!--           Sidebar Toggle (Topbar) -->
-<!--           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> -->
-<!--             <i class="fa fa-bars"></i> -->
-<!--           </button> -->
+        
+       활용 가능한 공간(예정)
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" >
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -232,34 +230,18 @@
             </div>
           </form>
 
-				<a href="#" onclick="javascript:startClock()"> </a>
-				<div id="clock">마법의 화면</div>
 
 				<!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
 
             <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+           <c:choose>
+           		<c:when test="${sessionScope.loginUser != null }">
+           			 <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
@@ -362,45 +344,47 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li>
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
+           			  <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">장재영 회원님</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.loginUser } 회원님</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
+                  My Page(예정)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
+                  Pokemon Deck(예정)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
+                  Pokemon Shop(List) (예정)
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="../logout/template.html" >
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
               </div>
             </li>
-
+           		</c:when>
+           		<c:otherwise>
+           			
+           		</c:otherwise>
+           </c:choose>
+          
           </ul>
-
         </nav>
         <!-- End of Topbar -->
 
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-		이곳도 활용할 수 있음.
+			<a href="#" onclick="javascript:startClock()"> </a>
+			<div id="clock" style="width:800px; height:30px; line-height:20px; color:#666;font-size:25px; text-align:left;">
+			</div>
         </div>
         
 	<div id="content">
@@ -410,7 +394,7 @@
 			</c:when>
 			<c:otherwise>
 <%-- 				<jsp:include page="front.jsp"/> --%>
-				<img alt="" src="../imgs/main1.jpg" width="100%" height="100%"/>
+				<img alt="" src="../imgs/intro.png" width="100%" height="100%"/>
 			</c:otherwise>
 		</c:choose>	
 	</div>
@@ -420,21 +404,21 @@
       </div>
       <!-- End of Main Content -->
 
-<!--       Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
+      <footer class="sticky-footer ">
+        <div class="container my-auto" >
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; 자바져스의 성공적인 프로젝트를 위해 </span>
+           <img alt="" src="../imgs/trophy.jpg" height="90" width="90"> <br/><span><font color="black">Copyright &copy; JSL 34th No.1 Gorgeous Superb Praiseworthy Remarkable Highest Brilliant Fabulous Splendid Magnificent Honorable Worthy Team <font color="red">[Javagers DBsemble]</font>
+            <br/><font color="red">[ Park JungHwan ] [ Kim DoWan ] [ Kim JunSeong ] [ Jang JaeYeong ]</font>
+            <br/>The &nbsp; JSL & Cosea Human Resources Development Institute Legends Quartet </font></span>	
           </div>
         </div>
       </footer>
-<!--       End of Footer -->
 
 <!--     </div> -->
 <!--     End of Content Wrapper -->
 
 <!--   </div> -->
-<!--   <!-- End of Page Wrapper --> -->
+<!--   <!-- End of Page Wrapper --> 
 
   <!-- 스크롤 제일 위로 버튼-->
   <a class="scroll-to-top rounded" href="#page-top">

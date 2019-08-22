@@ -89,7 +89,7 @@
 		</form:form>
 <!-- <div align="center"><a href="../home/userentry.html"><font color="white"> 신규 등록 </font></a></div> -->
 <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="../home/userentry.html" ><font color="white">Create</font></a>
+                  Don't have an account? <a href="../home/userentry.html" ><font color="yellow"><u>Create</u></font></a>
 </div>
 	</c:otherwise>
 </c:choose>

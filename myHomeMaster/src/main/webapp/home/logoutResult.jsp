@@ -8,22 +8,27 @@
 <title>Insert title here</title>
 <style type="text/css">
 #content{
-	width: 99%;
-	height:30%;
+	width: 100%;
+	height:20%;
 	float: left;
- 	background-image: url('../imgs/logoutResult.jpg');    
-	background-size: 1800px;
+ 	background-image: url('../imgs/666.jpg');    
+	background-size: 1700px;
 }
 </style>
 </head>
 <body>
 <div id="content">
 <!-- 	<img alt="" src="../imgs/main1.jpg" width="100%" height="100%"/> -->
+<script type="text/javascript">
+	alert("또 방문해주세요 ~ 트레이너님 !");
+	</script>
 </div>
 <c:choose>
-	<c:when test="${sessionScope.loginUser == null }">
-	<h3 align="center"><font color="white">　　　　<br/>
-		또 방문해주세요 !</font></h3>
+	<c:when test="${sessionScope.loginUser == null }"><h3 align="center"><font color="white">　
+		또 방문해주세요 !</font></h3><br/>
+		
+		<div align="center"><a href="../home/intro.html"><font color="red"> to main..</font></a></div>
+	
 	</c:when>
 	<c:otherwise>
 	<h3 align="center"><font color="black">　　　　<br/>
