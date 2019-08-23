@@ -83,7 +83,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link"> JSL 34±â Javagers <br/> ÃÖÁ¾ ÇÁ·ÎÁ§Æ® <br/> ÀÌ ºÎºÐ È°¿ë °¡´É
+        <a class="nav-link"> JSL 34ê¸° Javagers <br/> ìµœì¢… í”„ë¡œì íŠ¸ <br/> ì´ ë¶€ë¶„ í™œìš© ê°€ëŠ¥
         <div id="aside">
 		<fieldset>
 			<c:choose>
@@ -109,14 +109,14 @@
 
    	   <!-- Heading -->
       <div class="sidebar-heading">
-        	¿øÇÏ½Ã´Â °Ô½ÃÆÇÀ» ´©¸£¼¼¿ä.
+        	ì›í•˜ì‹œëŠ” ê²Œì‹œíŒì„ ëˆ„ë¥´ì„¸ìš”.
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="../home/intro.html" >
-          <span>³ªÀÇ Æ÷ÄÏ¸ó DECK</span>
+          <span>ë‚˜ì˜ í¬ì¼“ëª¬ DECK</span>
         </a>
       </li>
        
@@ -125,7 +125,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="../read/read.html">
-          <span>Æ÷ÄÏ¸ó µµ°¨(½æ³×ÀÏ)</span>
+          <span>í¬ì¼“ëª¬ ë„ê°(ì¸ë„¤ì¼)</span>
         </a>
       </li>
 
@@ -134,7 +134,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="../read/read.html">
-          <span>Æ÷ÄÏ¸ó µµ°¨(´É·ÂÄ¡)</span>
+          <span>í¬ì¼“ëª¬ ë„ê°(ëŠ¥ë ¥ì¹˜)</span>
         </a>
       </li>
 	
@@ -143,7 +143,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó À§½Ã¸®½ºÆ®</span>
+          <span>í¬ì¼“ëª¬ ìœ„ì‹œë¦¬ìŠ¤íŠ¸</span>
         </a>
       </li>
       
@@ -152,7 +152,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó ´ëÀü</span>
+          <span>í¬ì¼“ëª¬ ëŒ€ì „</span>
         </a>
       </li>
       
@@ -161,7 +161,7 @@
       
        <li class="nav-item">
         <a class="nav-link collapsed" href="../ranking/rankingList.html">
-          <span>Æ÷ÄÏ¸ó ¿ùµå·©Å·</span>
+          <span>í¬ì¼“ëª¬ ì›”ë“œëž­í‚¹</span>
         </a>
       </li>
       
@@ -170,7 +170,7 @@
       
         <li class="nav-item">
         <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó °Å·¡°Ô½ÃÆÇ</span>
+          <span>í¬ì¼“ëª¬ ê±°ëž˜ê²Œì‹œíŒ</span>
         </a>
       </li>
       
@@ -184,10 +184,10 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">¼±ÅÃÇÏ±â </h6>
-            <a class="collapse-item" href="login.html">·Î±×ÀÎ</a>
-            <a class="collapse-item" href="../home/userentry.html">È¸¿ø°¡ÀÔ</a>
-            <a class="collapse-item" href="forgot-password.html">ºñ¹Ð¹øÈ£ Ã£±â</a>
+            <h6 class="collapse-header">ì„ íƒí•˜ê¸° </h6>
+            <a class="collapse-item" href="login.html">ë¡œê·¸ì¸</a>
+            <a class="collapse-item" href="../home/userentry.html">íšŒì›ê°€ìž…</a>
+            <a class="collapse-item" href="forgot-password.html">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
           </div>
         </div>
       </li>
@@ -196,7 +196,7 @@
       <hr class="sidebar-divider d-none d-md-block">
 		
 		
-      <!-- »çÀÌµå¹Ù È­»ìÇ¥ -->
+      <!-- ì‚¬ì´ë“œë°” í™”ì‚´í‘œ -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
@@ -210,10 +210,10 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 	  
-        <!-- È­¸é »ó´Ü¹Ù -->
+        <!-- í™”ë©´ ìƒë‹¨ë°” -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         
-       È°¿ë °¡´ÉÇÑ °ø°£(¿¹Á¤)
+       í™œìš© ê°€ëŠ¥í•œ ê³µê°„(ì˜ˆì •)
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
@@ -260,7 +260,7 @@
                   </div>
                   <div>
                     <div class="small text-gray-500">August 20, 2019</div>
-                    <span class="font-weight-bold">È¸¿ø°¡ÀÔ, ·Î±×ÀÎ È­¸é ±¸ÇöÇÏ±â</span>
+                    <span class="font-weight-bold">íšŒì›ê°€ìž…, ë¡œê·¸ì¸ í™”ë©´ êµ¬í˜„í•˜ê¸°</span>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -271,7 +271,7 @@
                   </div>
                   <div>
                     <div class="small text-gray-500">August 20, 2019</div>
-                    	Áø¿µÀÌ Á×¿©¹ö¸®±â
+                    	ì§„ì˜ì´ ì£½ì—¬ë²„ë¦¬ê¸°
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -282,7 +282,7 @@
                   </div>
                   <div>
                     <div class="small text-gray-500">August 21, 2019</div>
-                    	Áø¿µÀÌ ÇÑ ¹ø ´õ Á×¿©¹ö¸®±â
+                    	ì§„ì˜ì´ í•œ ë²ˆ ë” ì£½ì—¬ë²„ë¦¬ê¸°
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Close</a>
@@ -307,8 +307,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Àç¿µÀÌÇü ! ¿À´Ã Àú¶û Æ÷ÄÏ¸ó ´ë°áÇÏ±â·Î ÇÏ¼ÌÀÝ¾Æ¿ä ! </div>
-                    <div class="small text-gray-500">Á¤ Áø¿µ ¡¤ 58ºÐ Àü</div>
+                    <div class="text-truncate">ìž¬ì˜ì´í˜• ! ì˜¤ëŠ˜ ì €ëž‘ í¬ì¼“ëª¬ ëŒ€ê²°í•˜ê¸°ë¡œ í•˜ì…¨ìž–ì•„ìš” ! </div>
+                    <div class="small text-gray-500">ì • ì§„ì˜ Â· 58ë¶„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -317,8 +317,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">ÀÌÂÊ¿¡ Àá¸¸º¸ ¹ß°ßÀÌ¿ä!</div>
-                    <div class="small text-gray-500">±è µµ¿Ï ¡¤ 1½Ã°£ Àü</div>
+                    <div class="text-truncate">ì´ìª½ì— ìž ë§Œë³´ ë°œê²¬ì´ìš”!</div>
+                    <div class="small text-gray-500">ê¹€ ë„ì™„ Â· 1ì‹œê°„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -327,8 +327,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">¿Àºü ¿Ö ÀÌ·¸°Ô ¿¬¶ôÀÌ...</div>
-                    <div class="small text-gray-500">°­¹Î°æ ¡¤ 2½Ã°£ Àü </div>
+                    <div class="text-truncate">ì˜¤ë¹  ì™œ ì´ë ‡ê²Œ ì—°ë½ì´...</div>
+                    <div class="small text-gray-500">ê°•ë¯¼ê²½ Â· 2ì‹œê°„ ì „ </div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -337,8 +337,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">¿Àºü Á¦¹ß Á» ¿¬¶ôÇØ..Á×À» °Í °°¾Æ</div>
-                    <div class="small text-gray-500">Å©¸®½ºÅ» ¡¤ 4½Ã°£ Àü</div>
+                    <div class="text-truncate">ì˜¤ë¹  ì œë°œ ì¢€ ì—°ë½í•´..ì£½ì„ ê²ƒ ê°™ì•„</div>
+                    <div class="small text-gray-500">í¬ë¦¬ìŠ¤íƒˆ Â· 4ì‹œê°„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -346,21 +346,21 @@
             </li>
            			  <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.loginUser } È¸¿ø´Ô</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.loginUser } íšŒì›ë‹˜</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  My Page(¿¹Á¤)
+                  My Page(ì˜ˆì •)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Pokemon Deck(¿¹Á¤)
+                  Pokemon Deck(ì˜ˆì •)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Pokemon Shop(List) (¿¹Á¤)
+                  Pokemon Shop(List) (ì˜ˆì •)
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="../logout/template.html" >
@@ -420,7 +420,7 @@
 <!--   </div> -->
 <!--   <!-- End of Page Wrapper --> 
 
-  <!-- ½ºÅ©·Ñ Á¦ÀÏ À§·Î ¹öÆ°-->
+  <!-- ìŠ¤í¬ë¡¤ ì œì¼ ìœ„ë¡œ ë²„íŠ¼-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -432,7 +432,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">¡¿</span>
+            <span aria-hidden="true">Ã—</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
