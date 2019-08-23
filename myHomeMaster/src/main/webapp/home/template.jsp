@@ -11,21 +11,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script type="text/javascript">
+  function workingClock() {
+		var days=["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth()+1;
+		if(month < 10) month="0" + month;
+		var date = today.getDate();
+		if(date<10) date="0"+date;
+		var index = today.getDay();
+		var day = days[index];
+		var hour = today.getHours();
+		var min = today.getMinutes();
+		if(min < 10) min="0" +min;
+		var sec = today.getSeconds();
+		if(sec < 10) sec = "0"+sec;
+		var str = year+"-"+month+"-"+date + "  " + day+"  "+ hour +" : "+ min+" : "+ sec;
+		document.getElementById("clock").innerHTML = str;
+	}
 
-  <title>SB Admin 2 - Dashboard</title>
+	function startClock() {
+		setInterval(workingClock, 1000);
+	}
+  </script>
+
+  <title>JAVAGERS's Final Legend Project</title>
   <style type="text/css">
+  
   #content{
-	width: 100%;
-	height: 90%;
+	width: 99%;
+	height:30%;
 	float: left;
-/* 	background-image: url('../imgs/pokeMain.jpg');   */
-	background-size: 1600px;
+/*  	background-image: url('../imgs/main1.jpg');    */
+	background-size: 1800px;
 }
-	
-	/* #aside{
-	color: red;
-		font-size: 20px;
-	}	 */
+
+.sticky-footer{
+	background: #F0F8FF;
+}
+.container-fluid{
+	background: #F0F8FF;
+}
   </style>
 
   <!-- Custom fonts for this template-->
@@ -35,7 +62,7 @@
   <link href="${pageContext.request.contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="javascript:startClock()">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -56,7 +83,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link"> ÄÚ¼¼¾Æ 34±â Javagers <br/> ÃÖÁ¾ ÇÁ·ÎÁ§Æ® <br/> ÀÌ ºÎºĞ È°¿ë °¡´É
+        <a class="nav-link"> JSL 34ê¸° Javagers <br/> ìµœì¢… í”„ë¡œì íŠ¸ <br/> ì´ ë¶€ë¶„ í™œìš© ê°€ëŠ¥
         <div id="aside">
 		<fieldset>
 			<c:choose>
@@ -82,14 +109,14 @@
 
    	   <!-- Heading -->
       <div class="sidebar-heading">
-        	¿øÇÏ½Ã´Â °Ô½ÃÆÇÀ» ´©¸£¼¼¿ä.
+        	ì›í•˜ì‹œëŠ” ê²Œì‹œíŒì„ ëˆ„ë¥´ì„¸ìš”.
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="../home/intro.html" >
-          <span>³ªÀÇ Æ÷ÄÏ¸ó DECK</span>
+          <span>ë‚˜ì˜ í¬ì¼“ëª¬ DECK</span>
         </a>
       </li>
        
@@ -98,7 +125,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="../read/read.html">
-          <span>Æ÷ÄÏ¸ó µµ°¨(½æ³×ÀÏ)</span>
+          <span>í¬ì¼“ëª¬ ë„ê°(ì¸ë„¤ì¼)</span>
         </a>
       </li>
 
@@ -106,8 +133,8 @@
       <hr class="sidebar-divider">
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó µµ°¨(´É·ÂÄ¡)</span>
+        <a class="nav-link collapsed" href="../read/read.html">
+          <span>í¬ì¼“ëª¬ ë„ê°(ëŠ¥ë ¥ì¹˜)</span>
         </a>
       </li>
 	
@@ -115,8 +142,8 @@
       <hr class="sidebar-divider">
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../cart/show.html">
-          <span>Æ÷ÄÏ¸ó À§½Ã¸®½ºÆ®</span>
+        <a class="nav-link collapsed" href="#">
+          <span>í¬ì¼“ëª¬ ìœ„ì‹œë¦¬ìŠ¤íŠ¸</span>
         </a>
       </li>
       
@@ -125,7 +152,7 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó ´ëÀü</span>
+          <span>í¬ì¼“ëª¬ ëŒ€ì „</span>
         </a>
       </li>
       
@@ -133,8 +160,8 @@
       <hr class="sidebar-divider">
       
        <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó ¿ùµå·©Å·</span>
+        <a class="nav-link collapsed" href="../ranking/rankingList.html">
+          <span>í¬ì¼“ëª¬ ì›”ë“œë­í‚¹</span>
         </a>
       </li>
       
@@ -143,7 +170,7 @@
       
         <li class="nav-item">
         <a class="nav-link collapsed" href="#">
-          <span>Æ÷ÄÏ¸ó °Å·¡°Ô½ÃÆÇ</span>
+          <span>í¬ì¼“ëª¬ ê±°ë˜ê²Œì‹œíŒ</span>
         </a>
       </li>
       
@@ -157,10 +184,10 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">¼±ÅÃÇÏ±â </h6>
-            <a class="collapse-item" href="login.html">·Î±×ÀÎ</a>
-            <a class="collapse-item" href="register.html">È¸¿ø°¡ÀÔ</a>
-            <a class="collapse-item" href="forgot-password.html">ºñ¹Ğ¹øÈ£ Ã£±â</a>
+            <h6 class="collapse-header">ì„ íƒí•˜ê¸° </h6>
+            <a class="collapse-item" href="login.html">ë¡œê·¸ì¸</a>
+            <a class="collapse-item" href="../home/userentry.html">íšŒì›ê°€ì…</a>
+            <a class="collapse-item" href="forgot-password.html">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
           </div>
         </div>
       </li>
@@ -169,7 +196,7 @@
       <hr class="sidebar-divider d-none d-md-block">
 		
 		
-      <!-- »çÀÌµå¹Ù È­»ìÇ¥ -->
+      <!-- ì‚¬ì´ë“œë°” í™”ì‚´í‘œ -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
@@ -183,20 +210,16 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 	  
-      <!-- Main Content -->
-<!--       <div id="content"> -->
-		
-	
-        <!-- È­¸é »ó´Ü¹Ù -->
+        <!-- í™”ë©´ ìƒë‹¨ë°” -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-<!--           Sidebar Toggle (Topbar) -->
-<!--           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> -->
-<!--             <i class="fa fa-bars"></i> -->
-<!--           </button> -->
+        
+       í™œìš© ê°€ëŠ¥í•œ ê³µê°„(ì˜ˆì •)
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" >
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -207,31 +230,18 @@
             </div>
           </form>
 
-          <!-- Topbar Navbar -->
+
+				<!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
 
             <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+           <c:choose>
+           		<c:when test="${sessionScope.loginUser != null }">
+           			 <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
@@ -249,8 +259,8 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                    <div class="small text-gray-500">August 20, 2019</div>
+                    <span class="font-weight-bold">íšŒì›ê°€ì…, ë¡œê·¸ì¸ í™”ë©´ êµ¬í˜„í•˜ê¸°</span>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -260,8 +270,8 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
+                    <div class="small text-gray-500">August 20, 2019</div>
+                    	ì§„ì˜ì´ ì£½ì—¬ë²„ë¦¬ê¸°
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -271,11 +281,11 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
+                    <div class="small text-gray-500">August 21, 2019</div>
+                    	ì§„ì˜ì´ í•œ ë²ˆ ë” ì£½ì—¬ë²„ë¦¬ê¸°
                   </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Close</a>
               </div>
             </li>
 
@@ -297,8 +307,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler ¡¤ 58m</div>
+                    <div class="text-truncate">ì¬ì˜ì´í˜• ! ì˜¤ëŠ˜ ì €ë‘ í¬ì¼“ëª¬ ëŒ€ê²°í•˜ê¸°ë¡œ í•˜ì…¨ì–ì•„ìš” ! </div>
+                    <div class="small text-gray-500">ì • ì§„ì˜ Â· 58ë¶„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -307,8 +317,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun ¡¤ 1d</div>
+                    <div class="text-truncate">ì´ìª½ì— ì ë§Œë³´ ë°œê²¬ì´ìš”!</div>
+                    <div class="small text-gray-500">ê¹€ ë„ì™„ Â· 1ì‹œê°„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -317,8 +327,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez ¡¤ 2d</div>
+                    <div class="text-truncate">ì˜¤ë¹  ì™œ ì´ë ‡ê²Œ ì—°ë½ì´...</div>
+                    <div class="small text-gray-500">ê°•ë¯¼ê²½ Â· 2ì‹œê°„ ì „ </div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -327,52 +337,54 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog ¡¤ 2w</div>
+                    <div class="text-truncate">ì˜¤ë¹  ì œë°œ ì¢€ ì—°ë½í•´..ì£½ì„ ê²ƒ ê°™ì•„</div>
+                    <div class="small text-gray-500">í¬ë¦¬ìŠ¤íƒˆ Â· 4ì‹œê°„ ì „</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li>
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
+           			  <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ÀåÀç¿µ È¸¿ø´Ô</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.loginUser } íšŒì›ë‹˜</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
+                  My Page(ì˜ˆì •)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
+                  Pokemon Deck(ì˜ˆì •)
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
+                  Pokemon Shop(List) (ì˜ˆì •)
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="../logout/template.html" >
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
               </div>
             </li>
-
+           		</c:when>
+           		<c:otherwise>
+           			
+           		</c:otherwise>
+           </c:choose>
+          
           </ul>
-
         </nav>
         <!-- End of Topbar -->
 
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-		ÀÌ°÷À» È°¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+			<a href="#" onclick="javascript:startClock()"> </a>
+			<div id="clock" style="width:800px; height:30px; line-height:20px; color:#666;font-size:25px; text-align:left;">
+			</div>
         </div>
         
 	<div id="content">
@@ -382,7 +394,7 @@
 			</c:when>
 			<c:otherwise>
 <%-- 				<jsp:include page="front.jsp"/> --%>
-				<img alt="" src="../imgs/main1.jpg" width="100%" height="90%"/>
+				<img alt="" src="../imgs/intro.png" width="100%" height="100%"/>
 			</c:otherwise>
 		</c:choose>	
 	</div>
@@ -392,23 +404,23 @@
       </div>
       <!-- End of Main Content -->
 
-<!--       Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
+      <footer class="sticky-footer ">
+        <div class="container my-auto" >
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; ÀÚ¹ÙÁ®½ºÀÇ ¼º°øÀûÀÎ ÇÁ·ÎÁ§Æ®¸¦ À§ÇØ </span>
+           <img alt="" src="../imgs/trophy.jpg" height="90" width="90"> <br/><span><font color="black">Copyright &copy; JSL 34th No.1 Gorgeous Superb Praiseworthy Remarkable Highest Brilliant Fabulous Splendid Magnificent Honorable Worthy Team <font color="red">[Javagers DBsemble]</font>
+            <br/><font color="red">[ Park JungHwan ] [ Kim DoWan ] [ Kim JunSeong ] [ Jang JaeYeong ]</font>
+            <br/>The &nbsp; JSL & Cosea Human Resources Development Institute Legends Quartet </font></span>	
           </div>
         </div>
       </footer>
-<!--       End of Footer -->
 
 <!--     </div> -->
 <!--     End of Content Wrapper -->
 
 <!--   </div> -->
-<!--   <!-- End of Page Wrapper --> -->
+<!--   <!-- End of Page Wrapper --> 
 
-  <!-- ½ºÅ©·Ñ Á¦ÀÏ À§·Î ¹öÆ°-->
+  <!-- ìŠ¤í¬ë¡¤ ì œì¼ ìœ„ë¡œ ë²„íŠ¼-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -420,7 +432,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">¡¿</span>
+            <span aria-hidden="true">Ã—</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
